@@ -26,6 +26,8 @@ module.exports = () => {
         description: "West's textEditor'",
         background_color: "#ffffff",
         theme_color: "#000000",
+        publicPath: "/",
+        start_url: "/",
         icons: [
           {
             src: path.resolve("./src/images/logo.png"),
@@ -36,7 +38,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: "./src-sw.js",
-        swDest: "sw.js",
+        swDest: "src-sw.js",
       }),
     ],
 
