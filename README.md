@@ -23,11 +23,19 @@ https://jatetexteditor-acea7a50c4b0.herokuapp.com
 The Offline Notes & Code Snippets App is built using the following technologies:
 
 -Node.js: A JavaScript runtime used for server-side development, providing a scalable and efficient environment for running JavaScript code.
+
 -Express.js: A minimalist web framework for Node.js used to build the backend infrastructure of the application, simplifying the development of web applications and APIs.
+
 -IndexedDB: A low-level API for client-side storage of significant amounts of structured data, enabling the application to store notes or code snippets locally.
+
 -Webpack: A module bundler used to bundle JavaScript files for optimized performance and compatibility.
+
 -Workbox: A set of libraries and Node modules for adding offline support to web applications, facilitating the creation of service workers for caching static assets.
+
 -HTML: The standard markup language used to structure and display content on the web.
+
 -CSS: The style sheet language used to define the presentation of HTML elements in the application.
+
 -JavaScript: The programming language of the web used to implement interactive features and functionalities in the application.
+
 By leveraging these technologies, the Offline Notes & Code Snippets App provides a robust and efficient solution for creating, storing, and retrieving notes or code snippets, enhancing user productivity and experience.
