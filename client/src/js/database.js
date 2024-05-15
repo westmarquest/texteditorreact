@@ -26,25 +26,23 @@ export const getDb = async () => {
   console.log("GET all from the database");
   const jateDB = await openDB("jate", 1);
   const tx = jateDB.transaction("jate", "readonly");
-  const objectStore = tx.objectStore("jate");
+  const jateStore = tx.objectStore("jate");
   tx.oncomplete = () => {
     console.log("Transaction completed");
   };
   tx.onerror = (event) => {
     console.error("Transaction error:", event.target.error);
   };
-  return new Promise((resolve, reject) => {
-    const request = objectStore.getAll();
-    request.onsuccess = (event) => {
-      const result = event.target.result;
-      console.log("result", result);
-      resolve(result);
-    };
-    request.onerror = (event) => {
-      console.error("Error fetching data:", event.target.error);
-      reject(event.target.error);
-    };
-  });
+  const result = await jateStore.getAll();
+  console.log("result", result);
+  const texts = result
+    .map((element) => {
+      return element.value;
+    })
+    .join("");
+
+  console.log("texts", texts);
+  return texts;
 };
 
 initdb();

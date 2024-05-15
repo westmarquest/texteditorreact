@@ -23,6 +23,7 @@ export default class {
 
     // When the editor is ready, set the value to whatever is store in indexeddb
     getDb().then((data) => {
+      console.log("data", data);
       console.info("Loaded data from IndexedDB, injecting into editor");
       this.editor.setValue(data || localData || header);
     });
